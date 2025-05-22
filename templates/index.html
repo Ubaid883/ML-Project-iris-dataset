@@ -1,36 +1,41 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ml Model</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iris Flower Species Predication</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <style>
+    .species{
+        margin-top: 15px;
+        margin-left: 25%;
+    }
+.font-bold{
+    margin-left: 25%;
+}
+  </style>
 </head>
-
-<body>
-    <!-- sepal_length	sepal_width	petal_length	petal_width -->
-    <form action="" method="post">
-        <div>
-            <label for="">sepal_length</label>
-            <input type="text" name="sepal_length" placeholder="1.22">
-        </div>
-        <div>
-            <label for="">sepal_width</label>
-            <input type="text" name="sepal_width" placeholder="1.22">
-        </div>
-        <div>
-            <label for="">petal_length</label>
-            <input type="text" name="petal_length" placeholder="1.22">
-        </div>
-        <div>
-            <label for="">petal_width</label>
-            <input type="text" name="petal_width" placeholder="1.22">
-        </div>
-        <button type="submit">Predict</button>
-    </form>
-    <div>
-       <p>Specis of Flower will be: <h3><strong> {{rsult}}</strong></h3></p>
+<body class="bg-gray-100 p-4">
+<!-- sepal_length	sepal_width	petal_length	petal_width -->
+  <!-- Flower Form -->
+  <form method="post" action="/" id="flowerForm" class="bg-white p-6 rounded-xl shadow-xl max-w-2xl mx-auto">
+    <h2 class="text-2xl font-bold text-red-600 mb-4">Flower Species Predication </h2>
+    <label for="">Sepal Length</label>
+    <input type="text" id="" name="sepal_length" placeholder="2.6" class="w-full mb-2 p-2 border rounded" required />
+    <label for="">Sepal Width</label>
+    <input type="text" id="" name="sepal_width" placeholder="3.7" class="w-full mb-2 p-2 border rounded" required />
+    <label for="">Petal Length</label>
+    <input type="text" id="" name="petal_length" placeholder="9.1" class="w-full mb-2 p-2 border rounded" required />
+    <label for="">Petal Width</label>
+    <input type="text" id="" name="petal_width" placeholder="7.5" class="w-full mb-2 p-2 border rounded" required />
+    <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Predication</button>
+    <div class="species"> 
+    <p>Species of Flower will be: <b>{{rsult}}</b></p>
+    
     </div>
+  </form>
+ 
 </body>
-
 </html>
