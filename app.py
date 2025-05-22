@@ -11,7 +11,7 @@ def home():
     if request.method == 'POST':
         data = [float(x) for x in request.form.values()]
         prediction = model.predict([data])  # model expects a 2D array
-        output = "Flower will be {}".format(prediction[0])
+        output = "{}".format(prediction[0])
 
     return render_template('index.html', rsult=output)
 
